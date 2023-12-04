@@ -59,7 +59,7 @@ namespace Angular_Auth.Controllers
             if (UserObj==null)
                 return BadRequest();
             //check Username
-            if (await CheckUserNameExistAsync(UserObj.UserName))
+            if (await CheckUserNameExistAsync(UserObj.UserName)) 
                 return BadRequest(new { Message = " user already Exists" });
 
             //check Email 
